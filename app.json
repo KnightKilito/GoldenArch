@@ -1,0 +1,54 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/shopcar/shopcar",
+        "pages/shopcar/jump",
+        "pages/buydiliver/buydiliver",
+        "pages/buydiliver/statement",
+        "pages/buyself/buyself",
+        "pages/logs/logs",
+        "pages/myaccount/myaccount",
+        "pages/myaccount/getUserInfo",
+        "pages/myaccount/myorders"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
+    },
+    
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "color": "#808080",
+        "selectedColor": "#FFD700",
+        "list": [
+            {
+                
+                "pagePath": "pages/index/index",
+                "iconPath": "pages/tabBar/imgs/首页.png",
+                "selectedIconPath": "pages/tabBar/imgs/首页选中.png"
+                
+            },
+            
+            {
+                "pagePath": "pages/myaccount/myaccount",
+                "iconPath": "pages/tabBar/imgs/我的.png",
+                "selectedIconPath": "pages/tabBar/imgs/我的选中.png"
+            }
+        ]
+    },
+    "usingComponents": {
+        "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+        "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+        "van-card": "@vant/weapp/card/index",
+        "van-submit-bar": "@vant/weapp/submit-bar/index",
+        "van-button": "@vant/weapp/button/index"
+      },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    }
+}

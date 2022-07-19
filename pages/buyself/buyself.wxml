@@ -1,0 +1,9 @@
+<!--pages/buyself/buyself.wxml-->
+<view style="padding-left: 6%; padding-top: 10%;">
+    <image class="image" src="https://img-blog.csdnimg.cn/f4d1f88fd0bf4e588a8eb33f01b36ff5.png" mode='aspectFill' style="height: 640px;"></image>
+    <view style="padding-top: 2%; padding-left: 29%;"><text>下次一定写</text></view>
+    
+    <view style="padding-top: 2%; padding-left: 30%;"><van-button color="linear-gradient(to right, #4bb0ff, #6149f6)" round="true" bind:click>
+    好的喵
+</van-button></view>
+</view>

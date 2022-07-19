@@ -1,0 +1,16 @@
+<!--pages/myaccount/getUserInfo.wxml-->
+<view class="box">
+    <view class="header">
+        <image src="/pages/index/imgs/01.jpg" style="width: 750rpx; height: 450rpx; display: inline-block; box-sizing: border-box"></image>
+    </view>
+            <view >
+                <text class="title" style="margin-left: 38%;">需要您授权登录\n\n</text>
+                <text class="msg" style="margin-left: 35%;">为了更好的提供服务\n\n</text>
+                <text class="msg" style="margin-left: 25%;">请在稍后的提示框中点击“允许”\n\n</text>
+            </view>
+            
+            <!-- <view @tap="authBtn">立即授权</view> -->
+            <button type="primary" class="authBtn" open-type="getUserInfo" bindtap="loginWepy">立即授权</button>
+            <button class="backBtn" bindtap="back">暂不授权</button>
+</view>
+

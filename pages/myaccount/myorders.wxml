@@ -1,0 +1,41 @@
+<view class="header">
+    <image src="/pages/index/imgs/01.jpg" style="width: 750rpx; height: 240rpx; display: inline-block; box-sizing: border-box"></image>
+</view>
+<view class="getAddress">
+    <text bindtap='handleChooseAddress' hidden="{{noOrdersUnvisiable}}">当前还没有订单哦！</text>
+</view>
+<view class="order" wx:for="{{allCart}}" data-item="item">
+    <view class="content_">
+        <view class="title">
+            <view>订单编号：{{item.orderid}}</view>
+            <text>交易成功</text>
+        </view>
+        
+        <view class="card" wx:for="{{item.list}}" wx:for-index="id" wx:for-item="num" wx:key="id">
+            <view class="card-img">
+                <image src="{{goods[id].pic}}"></image>
+            </view>
+            <view class="card-text">
+                <view class="card-text_">
+                    <text>{{goods[id].name}}</text>
+                    <view>
+                        <view>￥{{goods[id].price}}</view>
+                        <text>x{{item.list[id]}}</text>
+                    </view>
+                </view>
+                <!-- <view class="card-button">
+                    <view>删除</view>
+                    <view>查看物流</view>
+                    <view>再次购买</view>
+                </view> -->
+            </view>
+        </view>
+        
+    </view>
+    <view class="bottom-title">
+        <view class="card-button" bindtap="checkDelete" data-orderid='{{item.orderid}}'>
+            <view>删除</view>
+       </view>
+        <text>共{{item.count}}件商品 实付：￥{{item.total}}</text>
+    </view>
+</view>

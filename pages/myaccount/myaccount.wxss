@@ -1,0 +1,103 @@
+/* 个人信息 */
+page {
+    background-color: #eaeaea;
+    color: #999;
+    font-size: 26rpx;
+  }
+  .user_info_wrap {
+    height: 40vh;
+    /* position: relative; */
+    background-color: rgb(181, 189, 71);
+  }
+  .user_img_wrap {
+    position: relative;
+  }
+  .user_img_wrap .user_bg {
+    width: 100%;
+    height: 41vh;
+    filter: blur(10rpx);
+  }
+  .user_img_wrap .user_info {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+  }
+  .user_img_wrap .user_info .user_icon {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+  }
+  .user_img_wrap .user_info .user_nickname {
+    margin-top: 40rpx;
+    color: #fff;
+  }
+  /* 历史 */
+  .his_info_wrap {
+    position: relative;
+  }
+  .his_info {
+    padding-bottom: 20rpx;
+    width: 95%;
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translate(-50%);
+  }
+  .his_content {
+    background-color: #fff;
+    padding: 10rpx;
+    display: flex;
+    text-align: center;
+  }
+  .his_content navigator {
+    flex: 1;
+  }
+  .his_num {
+    color: rgb(227, 230, 71);
+  }
+  /* 订单 */
+  .order_content {
+    background-color: #fff;
+    margin-top: 40rpx;
+    padding: 10rpx 10rpx 0 10rpx;
+  }
+  .my_order {
+    padding: 10rpx;
+    border-bottom: 1px solid #ccc;
+  }
+  .order_navig {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+  }
+  .order_navig navigator {
+    flex: 1;
+    padding: 10rpx 0;
+  }
+  /* 地址 */
+  .address_content, .recommend_content {
+    margin-top: 40rpx;
+    padding: 20rpx 10rpx;
+    background-color: #fff;
+  }
+  /* 应用 */
+  .app_content {
+    margin-top: 40rpx;
+    /* padding: 10rpx; */
+    /* background-color: #fff; */
+  }
+  .app_content .contact {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact, .idea, .about {
+    /* margin-top: 2rpx; */
+    background-color: #fff;
+    padding: 20rpx 10rpx;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  

@@ -1,0 +1,71 @@
+<!--pages/0506/shopcar.wxml-->
+<view class="header">
+    <image src="/pages/index/imgs/01.jpg" style="width: 750rpx; height: 240rpx; display: inline-block; box-sizing: border-box"></image>
+</view>
+<view class="product-container">
+	<view class="product-list" style='height:{{height}}px'>
+		<view class="product-item" wx:for="{{slideProductList}}" wx:for-index="index" wx:key='slideProductList'>
+			<slide-delete pid="{{item.id}}" bindaction="handleSlideDelete" wx:key='slideProductList'>
+				<view class="product-item-wrap">
+					<icon type="{{item.select}}" size="19" data-index="{{index}}" data-select="{{item.select}}" bindtap="change" color="red" />
+					<view class="product_img">
+						<image src="{{item.url}}" class='goods-img' mode="widthFix"></image>
+					</view>
+					<view class="product-movable-item">
+						<view class="goods-name">{{item.name}}</view>
+						<view class="goods-type">
+                            <!-- 最新款 -->
+							<text>{{item.style}}</text>
+						</view>
+						<view class="goods-price">￥{{item.price}}</view>
+					</view>
+					<view class="product-movable-item product-movable-item-amount">
+						<view class="num-box">
+							<view class="btn-groups">
+								<button class="goods-btn btn-minus" style="width: 45rpx"  data-index="{{index}}" data-num="{{item.num}}" bindtap="subtraction">—</button>
+								<input class='num' type='number' data-index="{{index}}" bindblur="numIputBlur" bindinput='inputNum' value='{{item.num}}'></input>
+								<button class="goods-btn btn-add" style="width: 45rpx" data-index="{{index}}" data-num="{{item.num}}" bindtap="addtion">+</button>
+							</view>
+						</view>
+					</view>
+				</view>
+			</slide-delete>
+		</view>
+        <view class="liubai" style="height: 106rpx;"></view>
+	</view>
+	
+</view>
+<view class="cart-fixbar">
+		<view class="allSelect">
+			<icon type="{{allSelect}}" size="19" data-select="{{allSelect}}" bindtap="allSelect" color='#fff' />
+			<view class="allSelect-text">全选</view>
+		</view>
+		<view class="count">
+			<text>合计：</text>￥{{count}}
+		</view>
+		<view class="order">
+			<view class="orders">
+				去结算
+				<text class="allnum">({{num}})</text>
+			</view>
+		</view>
+</view>
+<!-- <view class="footer">
+	<navigator class="ft_item" url="../shoping/shoping" hover-class="none" open-type='redirect'>
+		<image src="../../image/sy_1.png"></image>
+		<view class="item_title">首页</view>
+	</navigator>
+	<navigator url="../classification/classification" hover-class="none" open-type='redirect' class="ft_item">
+		<image src="../../image/fl_1.png"></image>
+		<view class="item_title">分类</view>
+	</navigator>
+	<view class="ft_item">
+		<image src="../../image/gwc.png"></image>
+		<view class="item_title">购物车</view>
+	</view>
+	<navigator hover-class="none" url="../my/my" open-type='redirect' class="ft_item">
+		<image src="../../image/gr_1.png"></image>
+		<view class="item_title">我的</view>
+	</navigator>
+</view>  -->
+

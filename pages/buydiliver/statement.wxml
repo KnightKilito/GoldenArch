@@ -1,0 +1,38 @@
+<!--pages/buydiliver/statement.wxml-->
+<view class="header">
+    <image src="/pages/index/imgs/01.jpg" style="width: 750rpx; height: 240rpx; display: inline-block; box-sizing: border-box"></image>
+</view>
+<view class="getAddress">
+    <button bindtap='handleChooseAddress' hidden="{{getAddressUnvisiable}}">获取地址</button>
+</view>
+<view class="address" style="height: 100px;">
+    <view><text>收货地址</text></view>
+    <view><text>收件人：{{userAddressInfo.userName}}</text></view>
+    <view><text>联系电话：{{userAddressInfo.telNumber}}</text></view>
+    <view><text>收货地址：{{userAddressInfo.provinceName+userAddressInfo.cityName+userAddressInfo.countyName+userAddressInfo.detailInfo}}</text></view>
+    <view>\n\n\n</view>
+    
+</view>
+
+
+<view class="list">
+    <view><text>订单编号</text></view>
+    <view><text>{{cart.orderid}}</text></view>
+			<view class="item" wx:for="{{cart.list}}" wx:for-index="id" wx:for-item="num" wx:key="id">
+				
+                <van-card
+                    num="{{cart.list[id]}}"
+                    price="{{goods[id].price}}"
+                    desc="好吃"
+                    title="{{goods[id].name}}"
+                    thumb="{{goods[id].pic}}"
+                />
+			</view>
+</view>
+
+<van-submit-bar
+  price="{{ cart.total*100 }}"
+  button-text="提交订单"
+  bind:submit="onSubmit"
+/>
+

@@ -1,0 +1,121 @@
+
+
+
+<view class='container'>
+
+  <!-- <button class='button' bindtap='buttonTap' type='primary'>显示弹窗</button> -->
+<!-- 纯宝别生气惹好不好๐·°(৹˃̵﹏˂̵৹)°·๐ -->
+  <modal title="端午安康" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel">
+    <view style="height: 500px;">
+      <image class="image" src="https://img-blog.csdnimg.cn/f4d1f88fd0bf4e588a8eb33f01b36ff5.png" mode='aspectFill' style="height: 500px;"></image>
+    </view>
+    <!-- 需要换行的话直接添加view标签 -->
+    <!-- <view style="padding-left: 100px;">对不起(*+﹏+*)</view>
+    <view style="padding-left: 80px;">红豆泥私密马赛！！！！</view> -->
+    <!-- <view>You say that you love rain,</view>
+    <view>but you open your umbrella when it rains...</view>
+    You say that you love the sun, 
+    but you find a shadow spot when the sun shines... 
+    You say that you love the wind, 
+    But you close your windows when wind blows... 
+    This is why I am afraid; You say that you love me too... -->
+  </modal>
+
+</view>
+
+<view class="all" style="background-color: antiquewhite">
+    <view class="head" >
+        <view class="swiper">
+            <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+            style="height: 200px;">
+                <block wx:for="{{background}}" wx:key="*this">
+                    <swiper-item style="width: 750rpx; height: 440rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+                        <view class="swiper-item {{item}}">
+                            <image src="/pages/index/imgs/{{item}}"  style="width: 750rpx; height: 440rpx; display: inline-block; box-sizing: border-box"></image>
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+    </view>
+        <view class="weui-search-bar" style="position: relative; left: 0rpx; top: -200rpx">
+            <view class="weui-search-bar__form">
+                <!-- 最初始时的搜索框 -->
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" />
+                </view>
+                <!-- 可编辑时的搜索框 -->
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">搜索</view>
+                </label>
+            </view>
+            <!-- 取消搜索 -->
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <!-- part2 -->
+        <view class="buymethod" style="position: relative; top: -150rpx">
+            <view class="diliver" bindtap="go2buydiliver">
+                <image src='https://img-blog.csdnimg.cn/da785bd8832e4a84840210e7e7b4c913.png' style="width: 200rpx; height: 200rpx; display: inline-block; box-sizing: border-box"></image>
+                <view class="ziti">
+                    
+                    <text style="font-size: large; font-weight: 800;">外送</text>
+                </view>
+            </view>
+            <view class="diliver" bindtap="go2buyself">
+                <image src='https://img-blog.csdnimg.cn/107f8e7c9d07411b8bb5fed9437baba5.png' style="width: 200rpx; height: 200rpx; display: inline-block; box-sizing: border-box"></image>
+                <view class="ziti">
+                    <text style="font-size: large; font-weight: 800;">自提</text>
+                </view>
+            </view>
+        </view>
+        <view style="padding-bottom: 10px;">今日活动</view>
+        <!-- part3 -->
+        <view class="showgoods">
+            <block wx:for="{{goods}}" data-item="item">
+                <view class="gooddetail">
+                    <image src="{{item.gimg}}" mode="aspectFill"></image>
+                    <view><text class="gname">{{item.gname}}</text></view>
+                    <view><text class="gprice" style="color: orange; font-weight: 400; font-size: large;">￥{{item.gprice}}</text></view>
+                    <view><text class="gdetail">商品详情：{{item.gdetail}}</text></view>
+                </view>
+            </block>
+        </view>
+
+
+
+
+
+
+        <!-- <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_switch">
+                    <view class="weui-cell__bd">指示点</view>
+                    <view class="weui-cell__ft">
+                        <switch checked="{{indicatorDots}}" bindchange="changeIndicatorDots" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_switch">
+                    <view class="weui-cell__bd">自动播放</view>
+                    <view class="weui-cell__ft">
+                        <switch checked="{{autoplay}}" bindchange="changeAutoplay" />
+                    </view>
+                </view>
+            </view>
+        </view> -->
+
+        <!-- <view class="page-section page-section-spacing">
+            <view class="page-section-title">
+                <text>幻灯片切换时长(ms)</text>
+                <text class="info">{{duration}}</text>
+            </view>
+            <slider bindchange="durationChange" value="{{duration}}" min="500" max="2000" />
+            <view class="page-section-title">
+                <text>自动播放间隔时长(ms)</text>
+                <text class="info">{{interval}}</text>
+            </view>
+            <slider bindchange="intervalChange" value="{{interval}}" min="2000" max="10000" />
+        </view> -->
+        <text style="padding-left: 20%; padding-top: 10%; color: darkgrey;">——我也是有底线的(*/ω＼*)——</text>
+</view>

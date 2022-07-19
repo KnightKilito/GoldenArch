@@ -1,0 +1,73 @@
+
+
+
+<!-- 个人信息 -->
+<view class="user_info_wrap">
+  <view class="user_img_wrap">
+    <image class="user_bg" src="{{userInfo.authUrl}}"></image>
+    <view class="user_info">
+      <image class="user_icon" src="{{userInfo.authUrl}}" bindtap="go2getUserInfo"></image>
+      <view class="user_nickname">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+</view>
+<!-- 历史 -->
+<view class="his_info_wrap">
+  <view class="his_info">
+    <!-- 收藏等 -->
+    <!-- <view class="his_content">
+      <navigator>
+        <view class="his_num">0</view>
+        <view class="his_name">收藏的店铺</view>
+      </navigator>
+      <navigator>
+        <view class="his_num">0</view>
+        <view class="his_name">收藏的店铺</view>
+      </navigator>
+      <navigator>
+        <view class="his_num">0</view>
+        <view class="his_name">收藏的店铺</view>
+      </navigator>
+      <navigator>
+        <view class="his_num">0</view>
+        <view class="his_name">收藏的店铺</view>
+      </navigator>
+    </view> -->
+    <!-- 订单 -->
+    <view class="order_content">
+      <view class="my_order">我的订单</view>
+      <view class="order_navig">
+        <navigator url="/pages/myaccount/myorders">
+          <icon class="icon-box-img" type="success"></icon>
+          <view>全部订单</view>
+        </navigator>
+        <navigator>
+          <icon class="icon-box-img" type="success"></icon>
+          <view>待付款</view>
+        </navigator>
+        <navigator>
+          <icon class="icon-box-img" type="success"></icon>
+          <view>待收货</view>
+        </navigator>
+        <navigator>
+          <icon class="icon-box-img" type="success"></icon>
+          <view>退款/退货</view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 地址 -->
+    <view class="address_content" bindtap='handleChooseAddress'>收货地址管理</view>
+    <!-- 应用 -->
+    <view class="app_content">
+      <view class="contact">
+        <text>联系客服</text>
+        <text>400-418-4000</text>
+      </view>
+      <view class="idea">意见反馈</view>
+      <view class="about">关于我们</view>
+    </view>
+    <!-- 推荐 -->
+    <view class="recommend_content" bindtap='shareWxxcx'>把应用推荐给其他人</view>
+  </view>
+</view>
+
